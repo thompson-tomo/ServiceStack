@@ -38,7 +38,7 @@ namespace ServiceStack.OrmLite.Tests.UseCase
         }
 
         [Test]
-#if NETCORE
+#if !NETFRAMEWORK
         [NUnit.Framework.Ignore("Microsoft.Data.Sqlite provider does not support `password` keyword")]
 #endif
         public void Simple_CRUD_example()

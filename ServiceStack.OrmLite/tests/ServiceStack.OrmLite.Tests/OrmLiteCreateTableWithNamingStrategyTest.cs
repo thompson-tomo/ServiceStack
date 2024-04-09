@@ -229,7 +229,7 @@ namespace ServiceStack.OrmLite.Tests
 
         string toUnderscoreSeparatedCompound(string name)
         {
-#if NETCORE
+#if !NETFRAMEWORK
             string r = char.ToLower(name[0]).ToString();
 #else
             string r = char.ToLower(name[0]).ToString(CultureInfo.InvariantCulture);

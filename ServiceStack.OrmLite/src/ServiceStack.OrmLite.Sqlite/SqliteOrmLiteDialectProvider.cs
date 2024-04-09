@@ -9,7 +9,7 @@ namespace ServiceStack.OrmLite.Sqlite
 
         public SqliteOrmLiteDialectProvider()
         {
-#if NETFX
+#if NETFRAMEWORK
             ConnectionStringFilter = sb => sb.Append("Version=3;New=True;Compress=True");
 #endif
         }

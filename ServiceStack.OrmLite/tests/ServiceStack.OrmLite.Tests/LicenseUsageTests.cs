@@ -26,7 +26,7 @@ namespace ServiceStack.OrmLite.Tests
         [TearDown]
         public void TearDown()
         {
-#if NETCORE
+#if !NETFRAMEWORK
             Licensing.RegisterLicense(Environment.GetEnvironmentVariable("SERVICESTACK_LICENSE"));
 #else            
             Licensing.RegisterLicense(new AppSettings().GetString("servicestack:license"));
@@ -60,7 +60,7 @@ namespace ServiceStack.OrmLite.Tests
         [Test]
         public void Allows_creation_of_11_tables()
         {
-#if NETCORE
+#if !NETFRAMEWORK
             Licensing.RegisterLicense(Environment.GetEnvironmentVariable("SERVICESTACK_LICENSE"));
 #else            
             Licensing.RegisterLicense(new AppSettings().GetString("servicestack:license"));

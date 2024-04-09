@@ -209,7 +209,7 @@ namespace ServiceStack.OrmLite.PostgreSQL.Tests
         public void Can_insert_datetimeoffsets_regardless_of_current_culture()
         {
             // datetimeoffset's default .ToString depends on culture, ensure we use one with MDY
-//#if NETCORE
+//#if !NETFRAMEWORK
 //            var previousCulture = CultureInfo.CurrentCulture;
 //            CultureInfo.CurrentCulture = new CultureInfo("en-US");
 //#else            
@@ -242,7 +242,7 @@ namespace ServiceStack.OrmLite.PostgreSQL.Tests
             }
             finally
             {
-//#if NETCORE
+//#if !NETFRAMEWORK
 //                CultureInfo.CurrentCulture = previousCulture;
 //#else
 //                System.Threading.Thread.CurrentThread.CurrentCulture = previousCulture;

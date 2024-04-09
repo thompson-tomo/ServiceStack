@@ -73,7 +73,7 @@ namespace ServiceStack.OrmLite.PostgreSQL
             RegisterConverter<decimal[]>(new PostgreSqlDecimalArrayConverter());
             RegisterConverter<DateTime[]>(new PostgreSqlDateTimeTimeStampArrayConverter());
             RegisterConverter<DateTimeOffset[]>(new PostgreSqlDateTimeOffsetTimeStampTzArrayConverter());
-            
+                        
             RegisterConverter<XmlValue>(new PostgreSqlXmlConverter());
 
 #if NET6_0_OR_GREATER
@@ -91,8 +91,8 @@ namespace ServiceStack.OrmLite.PostgreSQL
                 { OrmLiteVariables.SystemUtc, "now() at time zone 'utc'" },
                 { OrmLiteVariables.MaxText, "TEXT" },
                 { OrmLiteVariables.MaxTextUnicode, "TEXT" },
-                { OrmLiteVariables.True, SqlBool(true) },                
-                { OrmLiteVariables.False, SqlBool(false) },                
+                { OrmLiteVariables.True, SqlBool(true) },                                
+                { OrmLiteVariables.False, SqlBool(false) },                                
             };
             
             //this.ExecFilter = new PostgreSqlExecFilter {

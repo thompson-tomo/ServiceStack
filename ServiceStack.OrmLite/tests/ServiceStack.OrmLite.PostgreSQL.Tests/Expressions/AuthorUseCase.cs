@@ -239,7 +239,7 @@ namespace ServiceStack.OrmLite.PostgreSQL.Tests.Expressions
                 //Any other character matches itself or its lower/upper case equivalent (i.e. case-insensitive matching).
                 //case-sensitivity matching depends on PostgreSQL underlying OS.
 
-#if NETCORE 
+#if !NETFRAMEWORK 
                 expected = 1;
 #else
                 expected = 3;
